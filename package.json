@@ -13,7 +13,9 @@
     "check": "bash scripts/check.sh",
     "contracts:build": "forge build",
     "contracts:test": "forge test",
-    "build": "vite build"
+    "build": "vite build",
+    "artifact": "forge build && bun run ./scripts/generate-artifact.ts",
+    "artifact:npx": "forge build && npx tsx ./scripts/generate-artifact.ts"
   },
   "dependencies": {
     "@circle-fin/adapter-viem-v2": "^1.19.2",

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { BRAND } from '@/lib/brand'
 
 /** User-facing pages, in navigation order. */
-export const PAGES = ['overview', 'agents', 'leases', 'activity', 'wallet', 'settings'] as const
+export const PAGES = ['overview', 'agents', 'leases', 'activity', 'wallet', 'settings', 'deploy'] as const
 /** `design` is the internal design-system preview. It is reachable by URL only and is not in the navigation. */
 export type PageId = (typeof PAGES)[number] | 'design'
 
@@ -13,6 +13,7 @@ const TITLES: Record<PageId, string> = {
   activity: 'Activity',
   wallet: 'Wallet',
   settings: 'Settings',
+  deploy: 'Deploy',
   design: 'Design system',
 }
 
